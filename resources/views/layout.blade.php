@@ -41,7 +41,8 @@
             <div id="navbar" class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">
                     <li><a href="{{url('/')}}">Home</a></li>
-                    <li class="active"><a href="{{url('/notas')}}">{{ trans('notas.model') }}</a></li>
+                    <li><a href="{{url('/notas')}}">{{ trans('notas.model') }}</a></li>
+                    <li><a href="{{url('/likes')}}">{{ trans('likes.model') }}</a></li>
                 </ul>
             </div><!--/.nav-collapse -->
         </div>

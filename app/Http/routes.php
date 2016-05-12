@@ -19,3 +19,4 @@ Route::auth();
 
 Route::get('/home', 'HomeController@index');
 Route::resource("notas","NotasController");
+Route::resource("likes", "LikesController");

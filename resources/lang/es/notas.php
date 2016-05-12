@@ -13,5 +13,6 @@
         'edit' => 'Editar',
         'save' => 'Guardar',
         'back' => 'Volver',
-        'view' => 'Mostrar'
+        'view' => 'Mostrar',
+        'favorite' => 'Favorito'
     ];

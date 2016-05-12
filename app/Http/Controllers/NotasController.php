@@ -4,6 +4,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 use App\Nota;
+use App\Like;
 use Illuminate\Http\Request;
 
 class NotasController extends Controller {
@@ -105,6 +106,10 @@ class NotasController extends Controller {
 	public function destroy($id)
 	{
 		$nota = Nota::findOrFail($id);
+		$likes = $nota->likes()->get();
+		foreach($likes as $like){
+			Like::findOrFail($like->id)->delete();
+		}
 		$nota->delete();
 
 		return redirect()->route('notas.index')->with('message', 'Item deleted successfully.');
