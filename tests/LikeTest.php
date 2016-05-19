@@ -19,5 +19,10 @@ class LikeTest extends TestCase
             ->actingAs($user)
             ->visit("/likes")
             ->see("Favoritos");
+
+        /*
+            El botón de favorito se ejecuta a través de AJAX, y el método click() espera ser llevado a otra página
+            por lo que no he podido ejecutar tal acción en la prueba unitaria.
+        */
     }
 }

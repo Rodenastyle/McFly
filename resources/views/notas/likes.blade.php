@@ -4,7 +4,6 @@
     <div class="page-header clearfix">
         <h1>
             <i class="glyphicon glyphicon-align-justify"></i> {{ trans('likes.model') }}
-            <a class="btn btn-success pull-right" href="{{ route('notas.create') }}"><i class="glyphicon glyphicon-plus"></i> {{ trans('notas.create') }}</a>
         </h1>
 
     </div>

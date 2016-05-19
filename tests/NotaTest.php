@@ -8,7 +8,7 @@ use App\User;
 
 class NotaTest extends TestCase
 {
-    use DatabaseTransactions;
+    use DatabaseTransactions; //Trait para hacer rollback a los datos tramitados por la prueba unitaria
     /**
      * A basic test example.
      *
