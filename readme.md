@@ -9,6 +9,6 @@ Esto es una prueba de nivel
 - php artisan serve
 
 ## TO-DO List
-- [ ] Validación
-- [ ] Favoritos con AJAX
-- [ ] Pruebas Unitarias
+- [x] Validación
+- [x] Favoritos con AJAX
+- [x] Pruebas Unitarias
