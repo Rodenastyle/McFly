@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\User;
 use App\Like;
 use App\Nota;
+use Illuminate\Http\Response;
 
 use App\Http\Requests;
 use Illuminate\Support\Facades\Auth;
@@ -13,6 +14,11 @@ use Illuminate\Support\Facades\Redirect;
 
 class LikesController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware("auth");
+    }
+    
     /**
      * Display a listing of the resource.
      *
@@ -25,7 +31,7 @@ class LikesController extends Controller
 
         $notas = array();
         foreach($query as $like){
-            $notas[] = $like->nota;
+            $notas[$like->id] = $like->nota;
         }
 
         $notas = collect($notas);
@@ -69,7 +75,7 @@ class LikesController extends Controller
         $like->user_id = Auth::user()->id;
         $like->save();
 
-        return redirect("/likes");
+        return (new Response("Like added", "200"));
     }
 
     /**

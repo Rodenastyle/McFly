@@ -38,7 +38,7 @@
                                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                         <button type="submit" class="btn btn-xs btn-danger"><i class="glyphicon glyphicon-trash"></i> {{ trans('notas.delete') }}</button>
                                     </form>
-                                    <a class="btn btn-xs btn-warning" href="{{ route('likes.show', $nota->id) }}"><i class="glyphicon glyphicon-star"></i> {{ trans('notas.favorite') }}</a>
+                                    <a class="btn btn-xs btn-warning likebutton" data-csrf="{{ csrf_token() }}" data-url="{{ route('likes.show', $nota->id) }}" href="javascript:void(0);"><i class="glyphicon glyphicon-star"></i> {{ trans('notas.favorite') }}</a>
                                 </td>
                             </tr>
                         @endforeach

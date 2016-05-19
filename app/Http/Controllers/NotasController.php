@@ -1,6 +1,7 @@
 <?php namespace App\Http\Controllers;
 
 use App\Http\Requests;
+use App\Http\Requests\NotasRequest;
 use App\Http\Controllers\Controller;
 
 use App\Nota;
@@ -42,7 +43,7 @@ class NotasController extends Controller {
 	 * @param Request $request
 	 * @return Response
 	 */
-	public function store(Request $request)
+	public function store(NotasRequest $request)
 	{
 		$nota = new Nota();
 		$nota->title = $request->input("title");
@@ -85,7 +86,7 @@ class NotasController extends Controller {
 	 * @param Request $request
 	 * @return Response
 	 */
-	public function update(Request $request, $id)
+	public function update(NotasRequest $request, $id)
 	{
 		$nota = Nota::findOrFail($id);
 
